@@ -1,0 +1,10 @@
+file = open("day3.txt")
+
+treeCount = 0
+column = 0
+for line in file:
+    if line[column] == "#":
+        treeCount += 1
+    column = (column + 3) % len(line)
+
+print(treeCount)
